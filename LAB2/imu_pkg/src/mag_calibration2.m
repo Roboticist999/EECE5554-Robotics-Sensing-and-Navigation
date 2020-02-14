@@ -225,9 +225,11 @@ delta_t_imu = imu.x_time(2:end) - imu.x_time(1:end-1);
 delta_yaw_quat = angle(2:end,1) - angle(1:end-1,1);
 yaw_ang_vel_quat = delta_yaw_quat ./ delta_t_imu;
 figure,
-hold on, grid on,ylim([-0.8 0.8])
+hold on, grid on,ylim([-0.8 0.8]),title('angular velocity from gyro and (yaw from quaternion/delta t)')
 plot(imu.x_time,imu.field_angular_velocity_z,'r.')
 plot(imu.x_time(1:end-1),yaw_ang_vel_quat,'b.')
+xlabel('time (s)'),ylabel('anguler velocity rad/s')
+legend('angular velocity from gyro','angular velocity from (delta yaw from quaternion/delta t)')
 
 
 %%%%%%%%%%%%%%%%%%%%% angular velocity calculation based on magnetometer
