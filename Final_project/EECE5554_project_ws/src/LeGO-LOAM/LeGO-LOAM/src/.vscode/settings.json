@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "bitset": "cpp",
+        "memory": "cpp",
+        "*.ipp": "cpp",
+        "random": "cpp",
+        "future": "cpp",
+        "optional": "cpp"
+    }
+}
